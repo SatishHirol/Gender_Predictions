@@ -64,18 +64,18 @@ jobs:
         pip install -r requirements.txt
         pip install selenium
 
-    - name: Run unit tests
-      run: python -m unittest discover #test_app.py  #python -m unittest discover
-
     - name: Set up Chrome
       uses: browser-actions/setup-chrome@latest
 
     - name: Set up Firefox
       uses: browser-actions/setup-firefox@latest
 
+    - name: Run unit tests
+      run: python -m unittest discover
+
     - name: Run Selenium tests
       run: |
-        python -m pip install --upgrade pytest selenium
+        python -m pip install --upgrade pytest
         pytest test_app.py
 
     - name: Archive artifacts
