@@ -56,10 +56,10 @@ def test_selenium(browser):
             assert "Gender Prediction" in driver.title
             # Add more Chrome-specific tests as needed
     elif browser == "firefox":
-    with webdriver.Firefox() as driver:
-        driver.get("http://localhost:5000")
-        assert "Gender Prediction" in driver.title
-        # Add more Firefox-specific tests as needed
+        with webdriver.Firefox() as driver:
+            driver.get("http://localhost:5000")
+            assert "Gender Prediction" in driver.title
+            # Add more Firefox-specific tests as needed
 if __name__ == '__main__':
     # If you run this file directly, it will run both unit and Selenium tests
     unittest.main()
