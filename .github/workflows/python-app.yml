@@ -65,7 +65,7 @@ jobs:
         pip install selenium
 
     - name: Run unit tests
-      run: python -m unittest test_app.py
+      run: python -m unittest discover #test_app.py  #python -m unittest discover
 
     - name: Set up Chrome
       uses: browser-actions/setup-chrome@latest
